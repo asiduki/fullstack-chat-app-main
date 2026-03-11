@@ -18,9 +18,7 @@ const PORT = process.env.PORT;
 const __dirname = path.resolve();
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://cryptochats.vercel.app",
-    "https://bxmwtl3g-5173.inc1.devtunnels.ms",
-    "https://chatz-gyef.onrender.com"
+    process.env.FRONTEND_URL
 ]
 
 app.use(express.json())
