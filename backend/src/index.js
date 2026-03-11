@@ -17,14 +17,15 @@ dotenv.config()
 const PORT = process.env.PORT;
 const __dirname = path.resolve();
 const allowedOrigins = [
-    "http://localhost:5173",
-    "https://fullstack-chat-app-main.vercel.app"
-];
+  "http://localhost:5173",
+  process.env.FRONTEND_URL
+].filter(Boolean);
+
 
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin: allowedOrigins,
+    origin:process.env.FRONTEND_URL|| allowedOrigins,
     credentials: true,
 }))
 
