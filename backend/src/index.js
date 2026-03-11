@@ -18,7 +18,7 @@ const PORT = process.env.PORT;
 const __dirname = path.resolve();
 const allowedOrigins = [
     "http://localhost:5173",
-    process.env.FRONTEND_URL,
+    "https://fullstack-chat-app-main.vercel.app"
 ];
 
 app.use(express.json())
